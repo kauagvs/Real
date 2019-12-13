@@ -28,16 +28,10 @@
   <a href="#memo-license">License</a>
 </p>
 
-## 🔨 Built With
+## 🔥 Installation and execution
 
-- [AdonisJS](https://adonisjs.com/) - Node.js web framework used
-- [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [React Native](https://facebook.github.io/react-native/) - A framework for building native apps using React
-
-## ✍🏻 Authors
-
-- **Kauã Semenov**
-
-## :memo: License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+1. Run `yarn` to install the dependencies;
+2. Run `docker run --name database_name -e POSTGRES_PASSWORD=270418 -p 5432:5432 -d postgres:11` to create the database;
+3. Run `docker run database_name` to start database
+4. Run `adonis migration:run` to perform the migrations;
+5. Run `adonis serve --dev` to start the server.
