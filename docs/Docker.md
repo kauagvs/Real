@@ -22,12 +22,6 @@
 
 </p>
 
-<p align="center">
-  <a href="#-built-with">Built With</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-authors">Authors</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
-</p>
-
 ## 🔥 Installation and execution
 
 1. Run `yarn` to install the dependencies;
