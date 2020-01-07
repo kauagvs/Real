@@ -25,7 +25,7 @@
 ## 🔥 Installation and execution
 
 1. Run `yarn` to install the dependencies;
-2. Run `docker run --name database_name -e POSTGRES_PASSWORD=270418 -p 5432:5432 -d postgres:11` to create the database;
-3. Run `docker run database_name` to start database
+2. Run `docker run --name database -e POSTGRES_PASSWORD=270418 -p 5432:5432 -d postgres:11` to create the database;
+3. Run `docker run database` to start database
 4. Run `adonis migration:run` to perform the migrations;
 5. Run `adonis serve --dev` to start the server.

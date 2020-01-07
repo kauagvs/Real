@@ -1,0 +1,44 @@
+version: "3.2"
+
+services:
+  backend:
+    container_name: ${APP_NAME}-Nodejs
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - BACKEND_PORT=${BACKEND_PORT}
+    expose:
+      - ${BACKEND_PORT}
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+    volumes:
+      - ./backend:/app/backend
+      - ./backend/app:/app/backend/app
+      - ./backend/node_modules:/app/backend/node_modules
+    command: adonis serve
+    networks:
+      - default
+
+  frontend:
+    container_name: ${APP_NAME}-Reactjs
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - FRONTEND_PORT=${FRONTEND_PORT}
+    expose:
+      - ${FRONTEND_PORT}
+    ports:
+      - ${FRONTEND_PORT}:${FRONTEND_PORT}
+    volumes:
+      - ./frontend/src:/app/frontend/src
+      - ./frontend/public:/app/frontend/public
+    links:
+      - backend
+    command: yarn start
+
+#define network
+networks:
+  default:
+    driver: bridge

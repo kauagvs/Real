@@ -32,6 +32,7 @@
     "adonis-acl": "^1.1.1",
     "adonis-kue": "^5.0.1",
     "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import-helpers": "^1.0.2",
     "moment": "^2.24.0",
     "pg": "^7.14.0",
     "prettier": "^1.19.1"
